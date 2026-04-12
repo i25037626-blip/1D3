@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Anhui</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1605164599901-7b0d5f52c7d3?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        /* 暗色遮罩 */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 60px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="content">
+            <h1>Discover Anhui</h1>
+            <p>welcome to my hometown</p>
+            <button class="btn" onclick="scrollToSection()">Explore more</button>
+        </div>
+    </div>
+
+    <!-- 下方内容区域 -->
+    <section id="more" style="height:100vh; display:flex; justify-content:center; align-items:center;">
+        <h2>More about Anhui coming soon...</h2>
+    </section>
+
+    <script>
+        function scrollToSection() {
+            document.getElementById("more").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>
