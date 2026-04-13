@@ -10,88 +10,106 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        body, html {
-            height: 100%;
+        body {
+            background-color: #f6e7d8; /* 奶黄色 */
         }
 
-        .hero {
-            height: 100vh;
-            background: url(file:///C:/Users/19056/Desktop/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1021630810021932847&skey=@crypt_7ca695a3_ae5a5c975ee295252834d2a9bfb542f8&mmweb_appid=wx_webfilehelper.jpg) no-repeat center center/cover;
+        .container {
             display: flex;
-            justify-content: center;
+            height: 100vh;
             align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
+            justify-content: space-between;
+            padding: 0 8%;
         }
 
-        /* 暗色遮罩 */
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
+        /* 左边文字 */
+        .left {
+            flex: 1;
         }
 
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
+        .left h1 {
             font-size: 60px;
-            letter-spacing: 2px;
+            color: #333;
         }
 
-        p {
-            margin-top: 10px;
-            font-size: 20px;
-            opacity: 0.9;
+        .left p {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #666;
         }
 
         .btn {
             margin-top: 30px;
-            padding: 12px 30px;
-            font-size: 16px;
+            padding: 12px 28px;
+            background-color: #333;
+            color: white;
             border: none;
-            background-color: #ffffff;
-            color: #333;
-            cursor: pointer;
             border-radius: 25px;
+            cursor: pointer;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background-color: #f0f0f0;
-            transform: scale(1.05);
+            background-color: #555;
+            transform: translateY(-3px);
+        }
+
+        /* 右边图片 */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right img {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* 响应式（手机适配） */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .right {
+                margin-top: 30px;
+            }
+
+            .left h1 {
+                font-size: 40px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="hero">
-        <div class="content">
+    <div class="container">
+        
+        <!-- 左边 -->
+        <div class="left">
             <h1>Discover Anhui</h1>
             <p>welcome to my hometown</p>
-            <button class="btn" onclick="scrollToSection()">Explore more</button>
+            <button class="btn" onclick="explore()">Explore more</button>
         </div>
+
+        <!-- 右边 -->
+        <div class="right">
+            <img src="https://n.sinaimg.cn/sinakd20122/799/w2048h1151/20230216/7611-94efe79a2f177655d7cb88c673311ac6.jpg">
+        </div>
+
     </div>
 
-    <!-- 下方内容区域 -->
-    <section id="more" style="height:100vh; display:flex; justify-content:center; align-items:center;">
-        <h2>More about Anhui coming soon...</h2>
-    </section>
-
     <script>
-        function scrollToSection() {
-            document.getElementById("more").scrollIntoView({ behavior: "smooth" });
+        function explore() {
+            alert("More content coming soon!");
         }
     </script>
 
