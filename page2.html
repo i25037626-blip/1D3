@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Anhui</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+    }
+
+    /* 奶黄色标题 */
+    .header {
+        background-color: #f6e7d8;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+        color: #333;
+    }
+
+    /* 咖色导航 */
+    .nav {
+        background-color: #8b6b4f;
+        text-align: center;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* 内容 */
+    .section {
+        padding: 60px 10%;
+    }
+
+    .section h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* 横向卡片 */
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        display: flex;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .card p {
+        padding: 20px;
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 返回按钮 */
+    .back-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: #333;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        background-color: #555;
+    }
+
+    /* 手机适配 */
+    @media (max-width: 768px) {
+        .card {
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- 标题 -->
+<div class="header">
+    <h1>Welcome to Anhui</h1>
+</div>
+
+<!-- 导航 -->
+<div class="nav">
+    <a href="#about">About</a>
+    <a href="#food">Food</a>
+    <a href="#culture">Culture</a>
+    <a href="#places">Places</a>
+</div>
+
+<!-- 内容 -->
+
+<div id="about" class="section">
+    <h2>About</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1583244532610-7b6c4b6a2d1f">
+            <p>Anhui is located in eastern China with rich natural scenery.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>It has a long history and beautiful countryside views.</p>
+        </div>
+    </div>
+</div>
+
+<div id="food" class="section">
+    <h2>Food</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604908176997-4311f76d77d9">
+            <p>Hui cuisine is one of the eight famous Chinese cuisines.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
+            <p>Local dishes are fresh, simple, and full of flavor.</p>
+        </div>
+    </div>
+</div>
+
+<div id="culture" class="section">
+    <h2>Culture</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
+            <p>Huangmei Opera is a famous traditional opera.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+            <p>Traditional villages show ancient Chinese architecture.</p>
+        </div>
+    </div>
+</div>
+
+<div id="places" class="section">
+    <h2>Places</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Mount Huangshan is famous for its stunning views.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+            <p>Hongcun village is a UNESCO World Heritage site.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 返回首页 -->
+<a href="index.html" class="back-btn">Back</a>
+
+</body>
+</html>
