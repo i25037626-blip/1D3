@@ -10,11 +10,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background-color: #f6e7d8;
+            background-color: #f6e7d8; /* 奶黄色 */
         }
 
         .container {
@@ -22,10 +22,10 @@
             height: 100vh;
             align-items: center;
             justify-content: space-between;
-            padding: 0 6%;
+            padding: 0 8%;
         }
 
-        /* 左边 */
+        /* 左边文字 */
         .left {
             flex: 1;
         }
@@ -35,19 +35,14 @@
             color: #333;
         }
 
-        .left p {
+        .desc {
             margin-top: 15px;
             font-size: 18px;
             color: #666;
+            line-height: 1.6;
+            max-width: 420px;
         }
 
-        .desc {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-    max-width: 420px;
-        }
         .btn {
             margin-top: 30px;
             padding: 14px 32px;
@@ -64,17 +59,16 @@
             transform: translateY(-3px);
         }
 
-        /* 右边（重点优化） */
+        /* 右边图片 */
         .right {
-            flex: 1.2; /* 比左边更宽 */
+            flex: 1.2;
             display: flex;
             justify-content: center;
         }
 
         .right img {
             width: 100%;
-            max-width: 650px; /* 图片更大 */
-            height: auto;
+            max-width: 650px;
             border-radius: 25px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.25);
         }
@@ -94,8 +88,8 @@
                 font-size: 42px;
             }
 
-            .right img {
-                max-width: 90%;
+            .desc {
+                max-width: 100%;
             }
         }
     </style>
@@ -104,22 +98,19 @@
 <body>
 
     <div class="container">
-        
+
         <!-- 左边 -->
         <div class="left">
             <h1>Discover Anhui</h1>
-            <p class="desc">
-    Anhui is a beautiful province in eastern China. 
-    It is famous for Mount Huangshan and old villages. 
-    It has nice food, traditional operas and a long history.
-</p>
-            <button class="btn" onclick="goExplore()">Explore more</button>
 
-<script>
-function goExplore() {
-    window.location.href = "page2.html";
-}
-</script>
+            <p class="desc">
+                Anhui is a beautiful province in eastern China.
+                It is famous for Mount Huangshan and old villages.
+                It has nice food, traditional operas and a long history.
+            </p>
+
+            <button class="btn" onclick="goExplore()">Explore more</button>
+        </div>
 
         <!-- 右边 -->
         <div class="right">
@@ -127,6 +118,12 @@ function goExplore() {
         </div>
 
     </div>
+
+    <script>
+        function goExplore() {
+            window.location.href = "page2.html";
+        }
+    </script>
 
 </body>
 </html>
