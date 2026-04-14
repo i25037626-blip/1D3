@@ -31,6 +31,7 @@
         padding: 15px 0;
         position: sticky;
         top: 0;
+        z-index: 10;
     }
 
     .nav a {
@@ -38,6 +39,11 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav a:hover {
+        opacity: 0.7;
     }
 
     /* 内容 */
@@ -64,6 +70,7 @@
         overflow: hidden;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         transition: 0.3s;
+        align-items: center;
     }
 
     .card:hover {
@@ -76,12 +83,24 @@
         object-fit: cover;
     }
 
-    .card p {
+    /* 文字区域 */
+    .text {
         padding: 20px;
+    }
+
+    .text h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        color: #222;
+        border-left: 4px solid #8b6b4f;
+        padding-left: 10px;
+    }
+
+    .text p {
+        margin: 0;
         font-size: 14px;
-        color: #333;
-        display: flex;
-        align-items: center;
+        color: #555;
+        line-height: 1.5;
     }
 
     /* 返回按钮 */
@@ -93,7 +112,6 @@
         color: white;
         padding: 12px 20px;
         border-radius: 25px;
-        cursor: pointer;
         text-decoration: none;
         font-size: 14px;
         transition: 0.3s;
@@ -119,12 +137,12 @@
 
 <body>
 
-<!-- 标题 -->
+<!-- 奶黄色标题 -->
 <div class="header">
     <h1>Welcome to Anhui</h1>
 </div>
 
-<!-- 导航 -->
+<!-- 咖色导航 -->
 <div class="nav">
     <a href="#about">About</a>
     <a href="#food">Food</a>
@@ -139,11 +157,11 @@
     <div class="cards">
         <div class="card">
             <img src="https://pic2.zhimg.com/v2-4b4b678a018068300ccd076795738ca5_r.jpg">
-            <p>The capital of Anhui Province is Hefei. It is located in eastern China, spanning the Yangtze River and the Huai River. It has a long history and a deep culture. There are famous scenic spots such as Huangshan and Hongcun Xidi, as well as Anhui cuisine, Huangmei opera and other characteristic cultures. It is a province with beautiful scenery and rich humanities.</p>
+            <div class="text">
+                <h3>Anhui</h3>
+                <p>The capital of Anhui Province is Hefei. It is located in eastern China, spanning the Yangtze River and the Huai River. It has a long history and a deep culture. There are famous scenic spots such as Huangshan and Hongcun Xidi, as well as Anhui cuisine, Huangmei opera and other characteristic cultures. It is a province with beautiful scenery and rich humanities.</p>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-            <p>It has a long history and beautiful countryside views.</p>
         </div>
     </div>
 </div>
@@ -152,12 +170,19 @@
     <h2>Food</h2>
     <div class="cards">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908176997-4311f76d77d9">
-            <p>Hui cuisine is one of the eight famous Chinese cuisines.</p>
+            <img src="https://th.bing.com/th/id/R.e96804dc12773e6a45abd2ec5860c735?rik=ntcfF7YeLdUUBw&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20181127%2f40d895f1d660416cb65bddfa5a823ee9.jpeg&ehk=MR6CWiqeHpflyT%2brN1f8lB%2f%2bj2oTFcu6h3lfM%2f8vDvU%3d&risl=&pid=ImgRaw&r=0">
+            <div class="text">
+                <h3>Stinky Mandarin Fish</h3>
+                <p>Stinky Mandarin Fish is the most recognizable classic dish in Anhui cuisine, which is famous for its unique fermented flavor. After marinating, the fish meat is firm and elastic, in the shape of garlic cloves. After braised, it is salty and fresh. The aroma is mellow, and the smell is slightly special fermentation, but the mouth is fresh and fragrant. The more you taste, the more delicious it is. It is a representative of the food culture in southern Anhui.</p>
+            </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
-            <p>Local dishes are fresh, simple, and full of flavor.</p>
+            <img src="https://th.bing.com/th/id/R.a1dc0f496e0b06efcc9fc654b9438087?rik=0JSA%2f4aL%2f8vh6Q&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd10111%2f508%2fw1265h843%2f20200903%2ffaba-iypetiv9421453.jpg&ehk=VHCiZXEkL2xpJmz3sbRpCCiaCFnACvGKFo4U4JVZoRQ%3d&risl=&pid=ImgRaw&r=0">
+            <div class="text">
+                <h3>Fuliji Roasted Chicken</h3>
+                <p>Fuliji Roasted Chicken is a classic dish in Suzhou, Anhui Province, and one of the "Four Famous Chickens in China". The local chicken is fried first and then marinated. After simmering slowly in the old soup, the color is bright red and oily. The meat is rotten and boneless, fat but not greasy. The aroma is mellow to the bone, salty and delicious. It is a very representative marinated flavor and gift in Anhui.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -166,12 +191,19 @@
     <h2>Culture</h2>
     <div class="cards">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
-            <p>Huangmei Opera is a famous traditional opera.</p>
+            <img src="https://imagepphcloud.thepaper.cn/pph/image/248/57/944.jpg">
+            <div class="text">
+                <h3>Huangmei Opera</h3>
+                <p>Huangmei Opera is a famous local opera of Anhui. It has a gentle and melodic tone, easy to understand and loved by the public. Its classic plays such as The Goddess Marriage and The Female Princess are widely known, making it a bright part of Chinese opera culture.</p>
+            </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
-            <p>Traditional villages show ancient Chinese architecture.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/HK_YTM_%E4%BD%90%E6%95%A6_Jordan_Road_%E5%BD%8C%E6%95%A6%E9%81%93_301_Nathan_Road_%E8%A3%95%E8%8F%AF%E5%9C%8B%E8%B2%A8_Yue_Hwa_Chinese_products_department_store_goods_February_2021_SS2_06.jpg/500px-HK_YTM_%E4%BD%90%E6%95%A6_Jordan_Road_%E5%BD%8C%E6%95%A6%E9%81%93_301_Nathan_Road_%E8%A3%95%E8%8F%AF%E5%9C%8B%E8%B2%A8_Yue_Hwa_Chinese_products_department_store_goods_February_2021_SS2_06.jpg">
+            <div class="text">
+                <h3>Xuan Paper</h3>
+                <p>Xuan Paper is a traditional treasure from Jing County, Xuancheng, Anhui. As one of China’s Four Treasures of the Study, it is also a world-class intangible cultural heritage. Made from bamboo bark and rice straw through nearly a hundred manual processes over three years, it is soft, tough, ink-absorbent, and durable. Known as the "thousand-year paper", it is the ideal material for Chinese calligraphy and painting.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -180,13 +212,30 @@
     <h2>Places</h2>
     <div class="cards">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-            <p>Mount Huangshan is famous for its stunning views.</p>
+            <img src="https://beautiful-photo.net/wp-content/uploads/2019/10/Huangshan-Yellow-Mountains.jpg">
+            <div class="text">
+                <h3>Mount Huangshan</h3>
+                <p>Huangshan is a UNESCO World Cultural and Natural Heritage Site in southern Anhui, known as "the most wonderful mountain under heaven". It’s famous for its five wonders: unique pines, strange rocks, sea of clouds, hot springs and winter snow, with steep peaks and stunning misty views.</p>
+            </div>
         </div>
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
-            <p>Hongcun village is a UNESCO World Heritage site.</p>
+            <img src="https://n.sinaimg.cn/sinakd20122/0/w2048h1152/20230216/42aa-ba8204f5ba2417ce65f61de7c064e2f7.jpg">
+            <div class="text">
+                <h3>Hongcun Village</h3>
+                <p>Hongcun is a thousand-year-old Huizhou ancient village at the foot of Huangshan Mountain, Anhui. Built in the shape of an ox with a water system, it has white walls, black tiles and is surrounded by mountains and rivers. With scattered ancient houses, Moon Lake and South Lake, it is known as "Village in Chinese Painting", showing the quiet elegance of Huizhou ancient villages.</p>
+            </div>
         </div>
+
+         <div class="card">
+        <img src="https://img1.qunarzz.com/travel/poi/1704/40/1b5e792e02f7f737.jpg">
+        <div class="text">
+            <h3>Mount Jiuhua</h3>
+            <p>Mount Jiuhua is a famous Buddhist mountain in Chizhou, Anhui, and one of China’s Four Sacred Buddhist Mountains. It has beautiful peaks, clouds all year round, and many ancient temples. The natural scenery and Buddhist culture blend together, quiet and sacred.</p>
+        </div>
+    </div>
+
+</div>
     </div>
 </div>
 
